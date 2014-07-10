@@ -136,30 +136,27 @@ Clase:
     }
 
 
-
 Grafico:
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-	import javax.swing.JFrame;
-	import javax.swing.JPanel;
-	import javax.swing.border.EmptyBorder;
-	import javax.swing.JButton;
-	import javax.swing.JLabel;
+public class GraficoRadio extends JFrame {
+    private JPanel contentPane;
+    private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10,btn11, btn12, btnEstado, btnanterior, btnsiguiente;
+    private JLabel lblEmisora, lblEstacion;
+    private InterfaceRadio miRadio;
+    private JLabel lblEmisora_1;
+    private JLabel lblFrecuencia;
+    private JButton btnCambiar;
 
-	import java.awt.Font;
-	import java.awt.event.ActionEvent;
-	import java.awt.event.ActionListener;
-
-	public class GraficoRadio extends JFrame {
-    	private JPanel contentPane;
-    	private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10,btn11, btn12, btnEstado, 			btnanterior, btnsiguiente;
-	private JLabel lblEmisora, lblEstacion;
-	private InterfaceRadio miRadio;
-    	private JLabel lblEmisora_1;
-    	private JLabel lblFrecuencia;
-    	private JButton btnCambiar;
-
-    	public GraficoRadio(){
+    public GraficoRadio(){
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	setBounds(100, 100, 450, 300);
 	contentPane = new JPanel();
@@ -270,3 +267,13 @@ Grafico:
     }
    
 
+main:
+	
+	import java.awt.EventQueue;
+
+
+	public class Main {
+    		public static void main(String[] args) {
+		GraficoRadio frame = new GraficoRadio();
+		frame.setVisible(true);
+    }}
