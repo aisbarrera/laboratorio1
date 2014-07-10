@@ -137,6 +137,9 @@ Clase:
 
 
 Grafico:
+
+
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -265,5 +268,244 @@ public class GraficoRadio extends JFrame {
 	contentPane.add(btnCambiar);
     
     }
-   
+      
+    private class ButtonListener implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent event){
+            Object fuente = event.getSource();
+			
+                if(fuente == btnCambiar){
+                    if(miRadio.getFrecuencia()){
+                        miRadio.cambiarFrecuencia(miRadio.getFrecuencia());
+                        lblEmisora.setText("AM");
+                    }else{
+			miRadio.cambiarFrecuencia(miRadio.getFrecuencia());
+			lblEmisora.setText("FM");
+                    }
+                    lblEstacion.setText(miRadio.getEstacion()+"");
+		}
+                
+               if (fuente == btnanterior){
+                    miRadio.bajarEstacion(miRadio.getEstacion());
+                    lblEstacion.setText(""+miRadio.getEstacion());
+                }
+               
+               if(fuente == btnsiguiente){
+                    miRadio.subirEstacion(miRadio.getEstacion());
+                    lblEstacion.setText(""+miRadio.getEstacion());
+		}
+               
+               if(fuente == btnEstado){
+                    miRadio.cambiarEstado(miRadio.getEstado());
+                    if(miRadio.getEstado()){
+			btnEstado.setText("Encendido");
+			btn1.setEnabled(true);
+			btn2.setEnabled(true);
+			btn3.setEnabled(true);
+                        btn4.setEnabled(true);
+			btn5.setEnabled(true);
+			btn6.setEnabled(true);
+			btn7.setEnabled(true);
+			btn8.setEnabled(true);
+			btn9.setEnabled(true);
+			btn10.setEnabled(true);
+			btn11.setEnabled(true);
+			btn12.setEnabled(true);
+			btnsiguiente.setEnabled(true);
+			btnanterior.setEnabled(true);
+			btnCambiar.setEnabled(true);
+                    }else{
+			btnEstado.setText("Apagado");
+			btn1.setEnabled(false);
+			btn2.setEnabled(false);
+			btn3.setEnabled(false);
+			btn4.setEnabled(false);
+			btn5.setEnabled(false);
+			btn6.setEnabled(false);
+			btn7.setEnabled(false);
+			btn8.setEnabled(false);
+			btn9.setEnabled(false);
+			btn10.setEnabled(false);
+			btn11.setEnabled(false);
+			btn12.setEnabled(false);
+			btnsiguiente.setEnabled(false);
+			btnanterior.setEnabled(false);
+			btnCambiar.setEnabled(false);
+		}
+            }
+               
+               
+            if(fuente == btn1){
+                if(miRadio.getSintonizar()[0] == null){
+                    miRadio.guardarEstacion(0, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[0]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[0])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[0])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn2){
+                if(miRadio.getSintonizar()[1] == null){
+                    miRadio.guardarEstacion(1, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[1]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[1])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[1])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn3){
+                if(miRadio.getSintonizar()[2] == null){
+                    miRadio.guardarEstacion(2, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[2]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[2])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[2])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn4){
+                if(miRadio.getSintonizar()[3] == null){
+                    miRadio.guardarEstacion(3, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[3]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[3])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[3])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn5){
+                if(miRadio.getSintonizar()[4] == null){
+                    miRadio.guardarEstacion(4, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[4]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[4])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[4])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn6){
+                if(miRadio.getSintonizar()[5] == null){
+                    miRadio.guardarEstacion(5, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[5]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[5])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[5])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn7){
+                if(miRadio.getSintonizar()[6] == null){
+                    miRadio.guardarEstacion(6, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[6]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[6])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[6])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn8){
+                if(miRadio.getSintonizar()[7] == null){
+                    miRadio.guardarEstacion(7, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[7]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[7])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[7])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn9){
+                if(miRadio.getSintonizar()[8] == null){
+                    miRadio.guardarEstacion(8, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[8]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[8])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[8])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn10){
+                if(miRadio.getSintonizar()[9] == null){
+                    miRadio.guardarEstacion(9, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[9]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[9])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[9])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+           
+            if(fuente == btn11){
+                if(miRadio.getSintonizar()[10] == null){
+                    miRadio.guardarEstacion(10, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[10]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[10])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[10])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }
+            
+            if(fuente == btn12){
+                if(miRadio.getSintonizar()[11] == null){
+                    miRadio.guardarEstacion(11, miRadio.getEstacion());
+                }else{
+                    lblEstacion.setText("" + miRadio.getSintonizar()[11]);
+                    if(Double.parseDouble(miRadio.getSintonizar()[11])<=107.9 && Double.parseDouble(miRadio.getSintonizar()[11])>=57.9){
+                        lblEmisora.setText("FM");
+                    }
+                    else{
+                        lblEmisora.setText("AM");
+                    }
+                }
+            }   
+            
+        }
+    }
+}
+
+
 
