@@ -8,8 +8,8 @@ Interfaz:
 
 
     public interface InterfaceRadio {
-      public void cambiarEstado(Boolean estado);
-      public void cambiarFrecuencia(Boolean estado); /// am false fm true
+      public void cambiarEstado(boolean estado);
+      public void cambiarFrecuencia(boolean estado); /// am false fm true
       public void subirEstacion (double Estacion);
       public void bajarEstacion (double Estacion);
       public void guardarEstacion (int boton, float estacion);
@@ -36,7 +36,7 @@ Clase:
     }
     
      @Override
-     public void cambiarEstado() {
+     public void cambiarEstado(boolean estado) {
       if(estado){
             estado = false;
     	}else{
@@ -45,7 +45,7 @@ Clase:
     }
     
     @Override
-    public void cambiarFrecuencia() {
+    public void cambiarFrecuencia(boolean estado) {
         if(amFm){
             amFm = false;
 	      }else{
@@ -54,7 +54,7 @@ Clase:
     }
     
     @Override
-    public void subirEstacion() {
+    public void subirEstacion(double estacion) {
         if(amFm){
             if(estacion <= 107.9){
 	            	estacion += 0.2;
@@ -71,7 +71,7 @@ Clase:
     }
 
     @Override
-    public void bajarEstacion() {
+    public void bajarEstacion(double estacion) {
         if(amFm){
             if(estacion >= 87.9){
 	            	estacion -= 0.2;
