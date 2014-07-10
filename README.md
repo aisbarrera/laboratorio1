@@ -139,49 +139,49 @@ Clase:
 Grafico:
 
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-import javax.swing.JLabel;
+		import javax.swing.JFrame;
+		import javax.swing.JPanel;
+		import javax.swing.border.EmptyBorder;
+		import javax.swing.JButton;
+		import javax.swing.JLabel;
 
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+		import java.awt.Font;
+		import java.awt.event.ActionEvent;
+		import java.awt.event.ActionListener;
 
-public class GraficoRadio extends JFrame {
-    private JPanel contentPane;
-    private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10,btn11, btn12, btnEstado, btnanterior, btnsiguiente;
-    private JLabel lblEmisora, lblEstacion;
-    private InterfaceRadio miRadio;
-    private JLabel lblEmisora_1;
-    private JLabel lblFrecuencia;
-    private JButton btnCambiar;
+		public class GraficoRadio extends JFrame {
+  	private JPanel contentPane;
+ 		private JButton btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10,btn11, btn12, btnEstado, btnanterior, 		btnsiguiente;
+  	private JLabel lblEmisora, lblEstacion;
+  	private InterfaceRadio miRadio;
+  	private JLabel lblEmisora_1;
+  	private JLabel lblFrecuencia;
+  	private JButton btnCambiar;
 
-    public GraficoRadio(){
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	setBounds(100, 100, 450, 300);
-	contentPane = new JPanel();
-	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-	setContentPane(contentPane);
-	contentPane.setLayout(null);
+	 public GraficoRadio(){
+  	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
    
-        miRadio = new Radio();
+  	miRadio = new Radio();
         
-        btn1 = new JButton("1");
-	btn1.setBounds(51, 172, 46, 29);
-	btn1.addActionListener(new ButtonListener());
-	contentPane.add(btn1);
+  	btn1 = new JButton("1");
+		btn1.setBounds(51, 172, 46, 29);
+		btn1.addActionListener(new ButtonListener());
+		contentPane.add(btn1);
 		
-	btn2 = new JButton("2");
-	btn2.setBounds(109, 172, 46, 29);
-	btn2.addActionListener(new ButtonListener());
-	contentPane.add(btn2);
+		btn2 = new JButton("2");
+		btn2.setBounds(109, 172, 46, 29);
+		btn2.addActionListener(new ButtonListener());
+		contentPane.add(btn2);
 		
-	btn3 = new JButton("3");
-	btn3.setBounds(167, 172, 46, 29);
-	btn3.addActionListener(new ButtonListener());
-	contentPane.add(btn3);
+		btn3 = new JButton("3");
+		btn3.setBounds(167, 172, 46, 29);
+		btn3.addActionListener(new ButtonListener());
+		contentPane.add(btn3);
 		
 	btn4 = new JButton("4");
 	btn4.setBounds(225, 172, 46, 29);
