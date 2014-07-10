@@ -26,7 +26,7 @@ Clase:
 
     public class Radio implements InterfaceRadio {
     
-    private boolean estado, amFm;
+    private boolean estado, amFm, frecuenia;
     private double estacion;
 	
     public Radio(){
@@ -36,7 +36,8 @@ Clase:
     }
     
      @Override
-     public void cambiarEstado(boolean estado) {
+     public void cambiarEstado(boolean estado1) {
+      estado = estado1;
       if(estado){
             estado = false;
     	}else{
@@ -45,7 +46,8 @@ Clase:
     }
     
     @Override
-    public void cambiarFrecuencia(boolean estado) {
+    public void cambiarFrecuencia(boolean frecuencia1) {
+       frecuencia = frecuencia1
         if(amFm){
             amFm = false;
 	      }else{
@@ -54,7 +56,8 @@ Clase:
     }
     
     @Override
-    public void subirEstacion(double estacion) {
+    public void subirEstacion(double estacion1) {
+        estacion = estacion1;
         if(amFm){
             if(estacion <= 107.9){
 	            	estacion += 0.2;
@@ -71,7 +74,8 @@ Clase:
     }
 
     @Override
-    public void bajarEstacion(double estacion) {
+    public void bajarEstacion(double estacion1) {
+       	estacion = estacion1
         if(amFm){
             if(estacion >= 87.9){
 	            	estacion -= 0.2;
@@ -130,4 +134,8 @@ Clase:
 	    this.estacion = estacion;
 	  }
     }
+
+
+Grafico:
+
 
